@@ -92,6 +92,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 10px;
 }
 .footer-newsletter{
   display: flex;
@@ -157,6 +158,14 @@
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
+  }
+
+  .footer-3rd {
+    text-align: center;
+    max-width: 300px;
+  }
+  .footer-legal {
+    align-items: center;
   }
 
 }
