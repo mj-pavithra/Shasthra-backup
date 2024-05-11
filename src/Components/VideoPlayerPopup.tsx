@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ReactPlayer from 'react-player';
-import { FaPlay, FaPause, FaForward, FaBackward, FaExpand, FaCompress } from 'react-icons/fa';
+// import { FaPlay, FaPause, FaForward, FaBackward, FaExpand, FaCompress } from 'react-icons/fa';
 import '../Styles/VideoPlayerPopup.css';
 
 interface VideoPlayerPopupProps {
@@ -10,20 +10,20 @@ interface VideoPlayerPopupProps {
 
 const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }) => {
     const [playing, setPlaying] = useState<boolean>(true);
-    const [seekTime] = useState<number>(10); // Fixed seek time to 10 seconds
-    const [playbackRate, setPlaybackRate] = useState<number>(1.0);
-    const [fullScreen, setFullScreen] = useState<boolean>(false);
+    // const [seekTime] = useState<number>(10); 
+    // const [playbackRate, setPlaybackRate] = useState<number>(1.0);
+    // const [fullScreen, setFullScreen] = useState<boolean>(false);
 
     const playerRef = useRef<ReactPlayer>(null);
 
-    const handleSeek = (forward: boolean) => {
-        const player = playerRef.current;
-        if (!player) return;
+    // const handleSeek = (forward: boolean) => {
+    //     const player = playerRef.current;
+    //     if (!player) return;
 
-        const currentTime = player.getCurrentTime();
-        const newTime = forward ? currentTime + seekTime : currentTime - seekTime;
-        player.seekTo(newTime);
-    };
+    //     const currentTime = player.getCurrentTime();
+    //     const newTime = forward ? currentTime + seekTime : currentTime - seekTime;
+    //     player.seekTo(newTime);
+    // };
 
     return (
         <div className="video-player-popup">
@@ -32,9 +32,9 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
                     ref={playerRef}
                     url={videoUrl}
                     playing={playing}
-                    playbackRate={playbackRate}
+                    // playbackRate={playbackRate}
                     width="100%"
-                    height={fullScreen ? '100%' : 'auto'}
+                    // height={fullScreen ? '100%' : 'auto'}
                     controls
                     onEnded={() => setPlaying(false)}
                 />
