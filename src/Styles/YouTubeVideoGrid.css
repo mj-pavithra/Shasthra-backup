@@ -1,0 +1,87 @@
+/* Container for the YouTube video grid */
+.youtube-video-grid {
+    padding: 30px 0px;
+}
+
+/* Grid container */
+.grid-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Row for each playlist */
+.playlist-row {
+    margin-bottom: 30px;
+}
+
+.playlist-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-left: calc(50vw - 150px);
+}
+
+/* Display videos within a playlist in a grid */
+.playlist-videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+/* Grid item (video thumbnail) */
+.grid-item {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-item:hover {
+    background-color: #f9f9f9;
+
+}
+.loading-container{
+    width: 50vw;
+}
+.thumbnail {
+    min-width: 200px;
+    width: 80%; /* Ensure thumbnails are responsive */
+    height: auto; /* Preserve aspect ratio */
+    border-radius: 5px;
+}
+
+/* Title of the video */
+.title {
+    margin-top: 5px;
+    font-size: 24px;
+}
+
+/* Subscribe button */
+.subscribe-button {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.subscribe-button a {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .grid-item {
+        width: 100%;
+    }
+
+    .playlist-title {
+        margin-left: 0;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+
+}
