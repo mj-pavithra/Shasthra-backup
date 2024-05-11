@@ -34,7 +34,7 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
                     playing={playing}
                     // playbackRate={playbackRate}
                     width="100%"
-                    // height={fullScreen ? '100%' : 'auto'}
+                    height="100%"
                     controls
                     onEnded={() => setPlaying(false)}
                 />
