@@ -31,10 +31,10 @@ const Footer = () => {
     { icon: FaLinkedin, scale: 1.3, link:'https://www.linkedin.com/in/manoj-pavithra/' },
   ];
 
-  const openingHours = [
-    { day: 'Monday - Saturday', time: '09AM - 09PM' },
-    { day: 'Sunday', time: '10AM - 08PM' },
-  ];
+//   const openingHours = [
+//     { day: 'Monday - Saturday', time: '09AM - 09PM' },
+//     { day: 'Sunday', time: '10AM - 08PM' },
+//   ];
 
   return (
     <div className="footer-container">
