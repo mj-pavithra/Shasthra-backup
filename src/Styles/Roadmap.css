@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.roadmap {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+  min-width: 500px;
+}
+
+.timeline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  background-color: gray;
+}
+
+.topbar{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 20px;
+  background-color: gold;
+
+}
+
+.dotOnTop {
+
+  position:absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: gold;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.roadmap-item {
+  position: relative;
+  margin : 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.item-container{
+  position: absolute;
+  background-color: rgb(247, 213, 213);
+  width: 50%;
+}
+.left .item-container {
+  left: 0;
+}
+
+.right .item-container {
+  right: 0;
+}
+
+.timestamp {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  background-color: gray;
+}
+
+.left .timestamp {
+  left: 60px;
+}
+
+.right .timestamp {
+  right: 60px;
+}
+
+.itemTitle {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  top: 20px;
+  
+}
+
+.right .itemTitle {
+  text-align: right;
+  right: 10px;
+}
+
+.left .itemTitle {
+  text-align: left;
+  left: 10px;
+}
+.description {
+  position: absolute;
+  background-color: gray;
+  max-width: 40%;
+  top:60px;
+}
+
+.right .description {
+  right: 60px;
+}
+
+.left .description {
+  left: 60px;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    width: 1px;
+  }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .timestamp {
+    font-size: 14px;
+  }
+
+  .description {
+    margin-left: 30px;
+  }
+}
