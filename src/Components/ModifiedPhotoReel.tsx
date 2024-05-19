@@ -10,7 +10,7 @@ const ModifiedPhotoReel: React.FC<PhotoReelProps> = ({ photos }) => {
     const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
     // Define the auto-slide interval (in milliseconds)
-    const slideInterval = 5000; // 2 seconds
+    const slideInterval = 3000; // 2 seconds
 
     // Automatic slide interval
     useEffect(() => {
