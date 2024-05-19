@@ -8,14 +8,13 @@ const AboutUs: React.FC = () => {
   useEffect(() => {
     const handleVideoLoaded = () => {
       if (videoRef.current) {
-        setAboutUsHeight(videoRef.current.videoHeight + 200);
+        setAboutUsHeight(videoRef.current.videoHeight + 50);
       }
     };
 
     const videoElement = videoRef.current;
     if (videoElement) {
       videoElement.addEventListener('loadedmetadata', handleVideoLoaded);
-      console.log('Video element:', videoElement);
     }
 
     return () => {
@@ -26,12 +25,22 @@ const AboutUs: React.FC = () => {
   }, []);
 
   return (
-    <div className="aboutUs" >
+    <div className="aboutUs" style={{ height: aboutUsHeight }}>
       <video className="backgroundVideo" ref={videoRef} autoPlay loop muted>
         <source src="/introVideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      
+      <div className="content">
+        <h1 className="greeting">
+          ආයුබෝවන් <br />
+          ආයුෂ ශාස්ත්‍රක<br />
+          ගණිතය රසවත්ව
+        </h1>
+        <h3 className="slogan">
+          B.Sc Engineering Hons. (ug) <br />
+          Electronic & Telecommunication (UoM)
+        </h3>
+      </div>
     </div>
   );
 };
