@@ -44,7 +44,7 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
             </div>
            
             <div className='videoAnnouncement '>
-                <p>මෙම වීඩියෝවට අදාල සටහන් සහ ආදර්ශ ප්‍රශ්න පත්‍ර ලබා ගැනීම‍ට සම්බන්ධ වන්න</p>
+                <p className='announcementText'>මෙම වීඩියෝවට අදාල සටහන් සහ ආදර්ශ ප්‍රශ්න පත්‍ර ලබා ගැනීම‍ට සම්බන්ධ වන්න</p>
                 <button className='whatsappButton'> <a href="https://chat.whatsapp.com/Clp33li43pR7lELjXDfSrt" className='whatsappLink' target="_blank" rel="noopener noreferrer" ><FaWhatsapp/>.  +94 77 257 6289</a></button>
             </div>
         </div>
