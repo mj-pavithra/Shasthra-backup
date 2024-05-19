@@ -13,9 +13,10 @@
 }
 
 .playlist-title {
-    font-size: 32px;
+    font-size: 42px;
     margin-bottom: 20px;
     margin-left: calc(50vw - 150px);
+    font-family: 'Abhaya Libre', sans-serif ;
 
 }
 
@@ -56,6 +57,7 @@
 .title {
     margin-top: 5px;
     font-size: 24px;
+    font-family: 'Abhaya Libre', sans-serif ;
 }
 
 /* Subscribe button */
@@ -81,6 +83,7 @@
 
     .playlist-title {
         margin-left: 0;
+        font-size: 32px;
         width: 100%;
     }
 

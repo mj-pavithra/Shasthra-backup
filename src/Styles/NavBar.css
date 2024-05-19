@@ -16,9 +16,9 @@
     height: 96px; /* Set consistent height */
     width: calc(100% - 15px); /* Calculate width with desired adjustment */
     padding: 0 5px; /* Add padding to account for the width adjustment */
-    background-color: white; /* Add a background color as desired */
     z-index: 100; /* Ensure navbar is on top of other elements */
     font-family: 'Poppins', sans-serif; /* Ensure font is correctly set */
+    background-color: #ffffffbb; /* Set background color */
 }
 
 .nav-part{
