@@ -4,8 +4,7 @@
 }
 
 /* Grid container */
-.grid-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
+.grid-container {/* Enable horizontal scrolling */
 }
 
 /* Row for each playlist */
@@ -17,13 +16,16 @@
     font-size: 32px;
     margin-bottom: 20px;
     margin-left: calc(50vw - 150px);
+
 }
 
 /* Display videos within a playlist in a grid */
 .playlist-videos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
+    overflow-x: auto; 
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
 /* Grid item (video thumbnail) */
@@ -33,6 +35,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 500px;
 }
 
 .grid-item:hover {
@@ -43,7 +46,7 @@
     width: 50vw;
 }
 .thumbnail {
-    min-width: 200px;
+    min-width: 220px;
     width: 80%; /* Ensure thumbnails are responsive */
     height: auto; /* Preserve aspect ratio */
     border-radius: 5px;
@@ -73,10 +76,12 @@
 @media screen and (max-width: 768px) {
     .grid-item {
         width: 100%;
+        min-width: 250px;
     }
 
     .playlist-title {
         margin-left: 0;
+        width: 100%;
     }
 
     .title {

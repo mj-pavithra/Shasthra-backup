@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player';import {
+    FaWhatsapp 
+  } from 'react-icons/fa';
 // import { FaPlay, FaPause, FaForward, FaBackward, FaExpand, FaCompress } from 'react-icons/fa';
 import '../Styles/VideoPlayerPopup.css';
 
@@ -40,20 +42,11 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
                 />
                 <button className="close-button" onClick={onClose}>X</button>
             </div>
-            {/* <div className="controls">
-                <button onClick={() => setPlaying(!playing)}>{playing ? <FaPause /> : <FaPlay />}</button>
-                <button onClick={() => handleSeek(true)}><FaForward /></button>
-                <button onClick={() => handleSeek(false)}><FaBackward /></button>
-                <select onChange={(e) => setPlaybackRate(parseFloat(e.target.value))} value={playbackRate}>
-                    <option value="0.75">0.75x</option>
-                    <option value="1.0">1.0x</option>
-                    <option value="1.25">1.25x</option>
-                    <option value="1.5">1.5x</option>
-                    <option value="1.75">1.75x</option>
-                    <option value="2.0">2.0x</option>
-                </select>
-                <button onClick={() => setFullScreen(!fullScreen)}>{fullScreen ? <FaCompress /> : <FaExpand />}</button>
-            </div> */}
+           
+            <div className='videoAnnouncement '>
+                <p>මෙම වීඩියෝවට අදාල සටහන් සහ ආදර්ශ ප්‍රශ්න පත්‍ර ලබා ගැනීම‍ට සම්බන්ධ වන්න</p>
+                <button className='whatsappButton'> <a href="https://chat.whatsapp.com/Clp33li43pR7lELjXDfSrt" className='whatsappLink' target="_blank" rel="noopener noreferrer" ><FaWhatsapp/>.  +94 77 257 6289</a></button>
+            </div>
         </div>
     );
 };
