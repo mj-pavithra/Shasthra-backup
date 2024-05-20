@@ -28,7 +28,7 @@
   transform: translateY(-100%); /* NavBar is hidden */
 }
 
-@media (max-width: 485px) {
+@media (max-width: 585px) {
   .HomePage{
     width: 100vw;
   }
