@@ -18,10 +18,13 @@ const Roadmap: React.FC<RoadmapProps> = ({ items = [] }) => {
   let reducedHeight: number = 1450;
 
   if(window.innerWidth < 900) {
-    reducedHeight = 600;
+    reducedHeight = 900;
   }
   if (window.innerWidth < 768) {
-    reducedHeight = 400;
+    reducedHeight = 600;
+  }
+  if (window.innerWidth < 500) {
+    reducedHeight = 50;
   }
 
 
