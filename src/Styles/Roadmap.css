@@ -5,7 +5,7 @@
 
 .roadmap {
   position: relative;
-  margin: 0 auto;
+  margin: 100px auto;
   width: 80%;
   max-width: 1000px;
   min-width: 500px;
@@ -13,12 +13,14 @@
 
 .timeline {
   position: absolute;
-  top: 0;
+  top: -20px;
   bottom: 0;
   left: 50%;
+  height: calc(100% + 40px);
   transform: translateX(-50%);
   width: 5px;
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.336);
+  z-index: 0;
 }
 
 .topbar{
@@ -55,62 +57,75 @@
 
 .item-container{
   position: absolute;
-  background-color: rgb(247, 213, 213);
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6e8efb, #a877e323);
   width: 50%;
-}
-.left .item-container {
-  left: 0;
+  border: solid 1px black;
+  border-radius: 33px;
+  width : 35%;
+  min-width: 200px;
+  height: 100px;
+  transition: left 0.5s, right 0.5s;
 }
 
 .right .item-container {
-  right: 0;
+  right: 50px;
+  background: linear-gradient(135deg,#a877e323, #6e8efb );
+}
+.left .item-container {
+  left: 50px;
+  background: linear-gradient(135deg, #6e8efb, #a877e323);
+}
+.right .open {
+  right: 0px;
+}
+.left .open {
+  left: 0px;
+}
+
+.open::before{
+
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background-clip: padding-box;
+}
+
+.open::after{
+  border: 15px solid transparent;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  background-clip: padding-box;
+  animation: runningShine 2s infinite linear;
 }
 
 .timestamp {
-  position: absolute;
-  top: 0;
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
   transform: translateY(-50%);
-  background-color: gray;
-}
-
-.left .timestamp {
-  left: 60px;
-}
-
-.right .timestamp {
-  right: 60px;
+  background-color: rgba(189, 187, 187, 0.87);
+  width: 100px;
+  left: calc(50% - 50px);
 }
 
 .itemTitle {
-  position: absolute;
+  position: relative;
+  text-align: center;
   font-size: 20px;
   font-weight: bold;
-  top: 20px;
-  
 }
 
-.right .itemTitle {
-  text-align: right;
-  right: 10px;
-}
-
-.left .itemTitle {
-  text-align: left;
-  left: 10px;
-}
 .description {
-  position: absolute;
-  background-color: gray;
-  max-width: 40%;
-  top:60px;
-}
-
-.right .description {
-  right: 60px;
-}
-
-.left .description {
-  left: 60px;
+  position: relative;
+  text-align: center;
+  background-color: rgba(214, 212, 212, 0.363);
+  background-blend-mode: color-burn ;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 5px;
+  left: 8%;
+  width: 80%;
 }
 
 @media (max-width: 768px) {
@@ -127,7 +142,16 @@
     font-size: 14px;
   }
 
-  .description {
-    margin-left: 30px;
+}
+
+@keyframes runningShine {
+  0% {
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
   }
 }

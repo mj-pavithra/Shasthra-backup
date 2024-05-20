@@ -14,6 +14,12 @@ interface RoadmapProps {
 const Roadmap: React.FC<RoadmapProps> = ({ items = [] }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  let reducedHeight: number = 950;
+
+  if (window.innerWidth < 768) {
+    reducedHeight = 400;
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +35,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ items = [] }) => {
   }, []);
 
   const timelineHeight = timelineRef.current?.offsetHeight || 0;
-  const calculatedHeight = Math.min(scrollPosition - 720, timelineHeight);
+  const calculatedHeight = Math.min(scrollPosition - reducedHeight, timelineHeight);
 
   const showProgress = {
     height: `${calculatedHeight}px`,
@@ -43,18 +49,22 @@ const Roadmap: React.FC<RoadmapProps> = ({ items = [] }) => {
         </div>
       </div>
       {items.length > 0 ? (
-        items.map((item, index) => (
-          <div
-            key={index}
-            className={`roadmap-item ${index % 2 === 0 ? 'left' : 'right'}`}
-          >
-            <div className='item-container'>
-              <div className="timestamp">{item.timestamp}</div>
-              <div className="description">{item.description}</div>
-              <div className="itemTitle">{item.title}</div>
+        items.map((item, index) => {
+          const isOpen = itemRefs.current[index]?.offsetTop! + reducedHeight <= scrollPosition;
+          return (
+            <div
+              key={index}
+              className={`roadmap-item ${index % 2 === 0 ? 'left' : 'right'}`}
+              ref={el => itemRefs.current[index] = el}
+            >
+              <div className={`item-container ${isOpen ? 'open' : ''}`}>
+                <div className="timestamp">{item.timestamp}</div>
+                <h1 className="itemTitle">{item.title}</h1>
+                <div className="description">{item.description}</div>
+              </div>
             </div>
-          </div>
-        ))
+          );
+        })
       ) : (
         <div>No roadmap items available</div>
       )}

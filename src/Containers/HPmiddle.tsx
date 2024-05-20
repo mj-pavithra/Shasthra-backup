@@ -9,6 +9,7 @@ import '../Styles/HPmiddle.css';
 interface RoadmapItem {
   timestamp: string;
   description: string;
+  title: string;
 }
 
 const HPmiddle: React.FC = () => {
