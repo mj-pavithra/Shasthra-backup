@@ -15,9 +15,9 @@ const Roadmap: React.FC<RoadmapProps> = ({ items = [] }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const timelineRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
-  let reducedHeight: number = 950;
+  let reducedHeight: number = 1450;
 
-  if(window.innerWidth < 1024) {
+  if(window.innerWidth < 900) {
     reducedHeight = 600;
   }
   if (window.innerWidth < 768) {
