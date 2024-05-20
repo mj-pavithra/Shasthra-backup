@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh; /* Center vertically */
-    width: 100vw; /* Center horizontally */
+    width: 90vw; /* Center horizontally */
 }
 
 /* Loading dots */
