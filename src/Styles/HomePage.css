@@ -8,7 +8,7 @@
 .HomePage {
   display: flex;
   flex-direction: column;
-  width: calc(100vw );
+  width: calc(100vw - 20px);
 }
 
 /* NavBar styling for visibility */
@@ -26,4 +26,10 @@
   width: 100%;
   transition: transform 0.3s ease-in-out;
   transform: translateY(-100%); /* NavBar is hidden */
+}
+
+@media (max-width: 485px) {
+  .HomePage{
+    width: 100vw;
+  }
 }
