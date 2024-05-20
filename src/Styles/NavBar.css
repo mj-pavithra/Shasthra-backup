@@ -49,3 +49,8 @@
     transition: top 0.3s ease-in-out;
   }
   
+  @media(max-width: 485px) {
+    .navbar {
+      width:480px; /* Adjust height for smaller screens */
+    }
+  }

@@ -17,9 +17,13 @@ const Roadmap: React.FC<RoadmapProps> = ({ items = [] }) => {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   let reducedHeight: number = 950;
 
+  if(window.innerWidth < 1024) {
+    reducedHeight = 600;
+  }
   if (window.innerWidth < 768) {
     reducedHeight = 400;
   }
+
 
   useEffect(() => {
     const handleScroll = () => {
