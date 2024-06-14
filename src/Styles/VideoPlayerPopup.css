@@ -31,9 +31,12 @@
 
 .close-button {
     position: absolute;
+    float: right;
     top: 10px;
-    right: 10px;
-    background-color: transparent;
+    left: calc(100% - 20px);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0.315);
     border: none;
     color: white;
     font-size: 20px;
@@ -94,6 +97,7 @@
   transition: background-color 0.3s ease;
   display: inline-flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .whatsappButton:hover {
@@ -101,15 +105,17 @@
 }
 
 .whatsappButton a {
+  display: flex;
   color: #fff;
   text-decoration: none;
   font-size: 1em;
-  display: flex;
-  align-items: center;
+  text-align: center;
+
 }
 
 .whatsappButton a::before {
   content: url('https://example.com/whatsapp-icon.png'); /* Replace with actual WhatsApp icon URL */
-  margin-right: 8px;
+  align-items: center;
+  text-align: center;
 }
 

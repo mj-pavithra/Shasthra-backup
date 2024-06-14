@@ -49,7 +49,7 @@ const MiddleNav: React.FC<MiddleNavProps> = ({ segments }) => {
 
             {/* Mobile navigation */}
             <div className={`middle-nav-min ${showDropdown ? "show-dropdown" : ""}`}>
-                <button className="dropdown-button" onClick={toggleDropdown}>
+                <button className="dropdown-button-middlenav" onClick={toggleDropdown}>
                     Menu
                 </button>
                 <div className={`dropdown-content ${showDropdown ? "show" : ""}`}>

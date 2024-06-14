@@ -44,14 +44,16 @@
         display: block;
     }
 
-    .dropdown-button {
+    .dropdown-button-middlenav {
         cursor: pointer;
         background-color: transparent;
         border: none;
         size: 25px;
-        padding: 15px 25px;
+        padding: 15px 15px;
         position: absolute;
         top: 30px;
+        color:#282c34;
+        width: 70px;
         right: 5vw;
         border: solid #282c34 1px;
     }
